@@ -1,22 +1,12 @@
-import os
-
-# Create a new HTML file
-html_file = open("hello_world.html", "w")
-
-# Write the HTML content
-html_content = """
 <!DOCTYPE html>
 <html>
 <head>
 <title>Hello, World!</title>
+<script type="module" src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
-<h1>Hello, World!</h1>
+<py-script>
+print("Hello, World!")
+</py-script>
 </body>
 </html>
-"""
-
-html_file.write(html_content)
-html_file.close()
-
-print("HTML file created successfully!")
