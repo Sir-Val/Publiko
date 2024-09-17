@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pyfiglet Example</title>
+    <title>PyScript with Pyfiglet</title>
+    
+    <!-- Load PyScript -->
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    
     <style>
         body {
             background-color: black;
             color: blue;
             font-family: monospace;
-            white-space: pre;
+        }
+        pre {
+            font-size: 20px;
+            white-space: pre-wrap;
         }
     </style>
 </head>
 <body>
+    <h1>PyScript + PyFiglet Example</h1>
+    
+    <!-- Text output section -->
+    <pre id="figlet-output"></pre>
+
     <py-script>
         import pyfiglet
 
-        ascii_art = pyfiglet.figlet_format("HAROLD", font="graffiti")
-        display(ascii_art)
+        # Using pyfiglet to generate text art
+        result = pyfiglet.figlet_format("HAROLD", font="graffiti")
+
+        # Displaying the text on the page
+        output_element = Element("figlet-output")
+        output_element.element.innerText = result
     </py-script>
 </body>
 </html>
